@@ -1,8 +1,11 @@
 {
   "name": "@revolvo-backend/source",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "add:api": "nx g @nx/nest:application apps/$npm_config_name --e2eTestRunner=none",
+    "add:lib": "nx g @nx/nest:library libs/$npm_config_name"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^11.0.0",
