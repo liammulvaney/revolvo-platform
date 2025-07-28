@@ -10,8 +10,13 @@
   "dependencies": {
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.0.0",
     "axios": "^1.6.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
   },
@@ -35,6 +40,8 @@
     "@swc/jest": "~0.2.38",
     "@types/jest": "^30.0.0",
     "@types/node": "~18.16.9",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/passport-local": "^1.0.38",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "jest": "^30.0.2",
