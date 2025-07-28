@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./apps/auth-api"
+    },
+    {
+      "path": "./libs/authentication"
     }
   ]
 }
