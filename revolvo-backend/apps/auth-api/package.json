@@ -52,5 +52,10 @@
         "command": "docker build -f apps/auth-api/Dockerfile . -t revolvo-backend-auth-api"
       }
     }
+  },
+  "dependencies": {
+    "@nestjs/cqrs": "^11.0.3",
+    "postgresql": "^0.0.1",
+    "typeorm": "^0.3.25"
   }
 }
