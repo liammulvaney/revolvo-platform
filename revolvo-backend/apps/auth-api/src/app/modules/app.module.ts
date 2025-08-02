@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { AppController } from '../controllers/app.controller';
+import { AppService } from '../services/app.service';
 import { APP_GUARD } from '@nestjs/core';
 import { ConfigModule } from '@nestjs/config';
 import { AuthGuard, RevolvoJWTBackendAuthenticationModule } from '@revolvo-backend/authentication';
@@ -8,9 +8,9 @@ import path from 'path';
 
 // Ensure the environment variables are loaded from the .env file
 const envFilePath = path.resolve(__dirname, '../../../env/.env');
-console.log(`variables: ${envFilePath}`);
 
 @Module({
+  // to propose a dynamic module that can be used to configure the basic api setup
   imports: [
     ConfigModule.forRoot({
       isGlobal: true, // Make the configuration globally available
