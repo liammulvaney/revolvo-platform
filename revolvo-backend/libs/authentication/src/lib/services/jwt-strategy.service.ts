@@ -15,7 +15,10 @@ export class JwtStrategyService extends PassportStrategy(Strategy, 'jwt') {
         });
     }
 
-    async validate(userLoginDTO: { username: string, password: string }): Promise<any> {
+    async validate(userLoginDTO: { 
+        username: string, 
+        password: string 
+    }): Promise<any> {
         return userLoginDTO;        
     }
 }

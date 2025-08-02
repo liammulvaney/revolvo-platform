@@ -16,7 +16,6 @@
     "axios": "^1.6.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
   },
@@ -48,6 +47,7 @@
     "jest-environment-node": "^30.0.2",
     "jest-util": "^30.0.2",
     "nx": "21.3.7",
+    "passport-local": "^1.0.0",
     "prettier": "^2.6.2",
     "ts-jest": "^29.4.0",
     "ts-node": "10.9.1",
