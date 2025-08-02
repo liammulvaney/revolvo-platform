@@ -1,5 +1,8 @@
 export * from './lib/authentication.module';
 
+// Common Auth DTOs
+export * from './lib/dtos/userLoginDTO';
+
 /**
  * Guard imports
  */
