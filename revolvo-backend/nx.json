@@ -29,7 +29,7 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["libs/authentication/*"]
+      "exclude": ["libs/authentication/*", "libs/database/*"]
     },
     {
       "plugin": "@nx/webpack/plugin",
@@ -56,7 +56,7 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["libs/authentication/*"],
+      "include": ["libs/authentication/*", "libs/database/*"],
       "options": {
         "typecheck": {
           "targetName": "typecheck"
