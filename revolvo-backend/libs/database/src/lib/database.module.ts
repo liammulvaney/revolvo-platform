@@ -1,33 +1,18 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TypeOrmModule, TypeOrmModuleAsyncOptions } from '@nestjs/typeorm';
 import { EntityClassOrSchema } from '@nestjs/typeorm/dist/interfaces/entity-class-or-schema.type';
+import { DatabaseType } from 'typeorm';
 
-
-export type DBOptions = {
-  type: 'postgres' | 'mysql' | 'sqlite' | 'mariadb' | 'mongodb',
-  database: string,
-  host: string,
-  port: number,
-  username: string,
-  password: string,
-  synchronize: boolean, // Optional, default is false in production
-}
+export type SupportedDBType = Extract<DatabaseType, 'postgres' | 'mysql' | 'mariadb'>;
 
 @Module({})
 export class RevolvoBackendDatabaseModule {
 
-  static forRootAsync(options: DBOptions): DynamicModule {
+  static forRootAsync(options: TypeOrmModuleAsyncOptions): DynamicModule {
     return {
       module: RevolvoBackendDatabaseModule,
       imports: [
-        TypeOrmModule.forRootAsync({
-          imports:[ ConfigModule ],
-          inject: [ConfigService],
-          useFactory: async () => ({
-            ...options
-          })
-        })
+        TypeOrmModule.forRootAsync(options)
       ]
     }
    }

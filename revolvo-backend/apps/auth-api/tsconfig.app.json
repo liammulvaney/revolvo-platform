@@ -9,7 +9,10 @@
     "emitDecoratorMetadata": true,
     "target": "es2021"
   },
-  "include": ["src/**/*.ts", "../../libs/authentication/src/lib/dtos/userLoginDTO.ts"],
+  "include": [
+    "src/**/*.ts",
+    "../../libs/authentication/src/lib/dtos/userLoginDTO.ts"
+  ],
   "exclude": [
     "out-tsc",
     "dist",
@@ -21,6 +24,9 @@
     "eslint.config.mjs"
   ],
   "references": [
+    {
+      "path": "../../libs/database/tsconfig.lib.json"
+    },
     {
       "path": "../../libs/authentication/tsconfig.lib.json"
     }
